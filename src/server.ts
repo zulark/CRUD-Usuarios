@@ -6,7 +6,9 @@ import Database from "./config/database";
 
 const app = express();
 const port = 3333;
+const cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use("/api", router);
 

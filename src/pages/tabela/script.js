@@ -123,7 +123,8 @@ function editUser(userId) {
         return response.json();
        })
     .then(data => {
-            createSuccessAlert('Usuário alterado', data);
+            createSuccessAlert('Usuário alterado');
+            fetchAllUsers(); 
         })
     .catch(error => 
         console.error('Error:', error)

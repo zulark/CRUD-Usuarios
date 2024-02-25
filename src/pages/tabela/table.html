@@ -13,8 +13,12 @@
 <body class="h-100" style="background-color: #f2f2f2;">
     <div class="container-fluid">
         <div class="input-group mb-3 mt-3 w-50">
-            <input type="text" class="form-control" id="searchInput" placeholder="Buscar usuário por ID"
-                aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+            <input class="form-control" id="searchInput" placeholder="Buscar usuário por ID"
+                aria-label="Recipient's username" aria-describedby="basic-addon2" type="number" min="1"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '')">
+
+
             <div class="input-group-append">
                 <button class="btn btn-primary search-btn" type="button" id="searchBtn">Buscar</button>
             </div>
@@ -39,8 +43,8 @@
         </table>
 
 
-        <div class="modal fade modal-dialog modal-dialog-centered" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel"
-            aria-hidden="true">
+        <div class="modal fade modal-dialog modal-dialog-centered" id="editUserModal" tabindex="-1"
+            aria-labelledby="editUserModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

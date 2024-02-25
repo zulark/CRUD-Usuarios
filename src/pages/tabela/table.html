@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body class="h-100" style="background-color: #f2f2f2;">
+    <div class="container-fluid">
+        <div class="input-group mb-3 mt-3 w-50">
+            <input type="text" class="form-control" id="searchInput" placeholder="Buscar usuário por ID"
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="searchBtn">Buscar</button>
+            </div>
+            <a href="../formulario/form.html">
+                <button type="button" class="btn btn-secondary" style="margin-left: 15px;">
+                    Formulário
+                </button>
+            </a>
+        </div>
+
+        <table class="table table-striped" id="usersTable">
+            <thead>
+                <tr>
+                    <th class="th-sm" scope="col">ID</th>
+                    <th class="th-sm" scope="col">Nome completo</th>
+                    <th class="th-sm" scope="col">Email</th>
+                    <th class="th-sm" scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+            </tbody>
+        </table>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

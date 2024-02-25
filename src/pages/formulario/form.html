@@ -15,7 +15,8 @@
         <form class="w-50" id="registrationForm">
             <div class="mb-4">
                 <label for="userName" class="form-label">Nome completo:</label>
-                <input type="text" class="form-control" id="userName" maxlength="100" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+                <input type="text" class="form-control" id="userName" maxlength="100"
+                    onkeydown="return /[a-zA-Z ]/i.test(event.key)">
             </div>
             <div class="mb-4">
                 <label for="userEmail" class="form-label">Email:</label>
@@ -23,11 +24,10 @@
             </div>
 
             <button type="submit" class="btn btn-success w-100">Cadastrar</button>
-            <a href="../tabela/table.html"> <button type="button" class="btn btn-secondary w-100 mt-2">Tabela</button> </a>
+            <a href="../tabela/table.html"> <button type="button" class="btn btn-secondary w-100 mt-2">Tabela</button>
+            </a>
         </form>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

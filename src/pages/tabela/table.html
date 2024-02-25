@@ -11,22 +11,23 @@
 </head>
 
 <body class="h-100" style="background-color: #f2f2f2;">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="input-group mb-3 mt-3 w-50">
 
             <input class="form-control" id="searchInput" placeholder="Buscar usuário por ID"
                 aria-label="Recipient's username" aria-describedby="basic-addon2" type="number" min="1"
                 oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '')">
 
-
             <div class="input-group-append">
                 <button class="btn btn-primary search-btn" type="button" id="searchBtn">Buscar</button>
             </div>
+
             <a href="../formulario/form.html">
-                <button type="button" class="btn btn-secondary" style="margin-left: 15px;">
+                <button type="button" class="btn btn-primary" style="margin-left: 15px;">
                     Formulário
                 </button>
             </a>
+
         </div>
 
         <table class="table table-striped" id="usersTable">

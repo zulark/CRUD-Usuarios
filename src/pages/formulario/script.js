@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    window.onload = document.getElementById("userEmail").value = ""; document.getElementById("userName").value = "";
+    window.onload = document.getElementById("userEmail").value = ""; 
+    document.getElementById("userName").value = "";
     
     document.getElementById('registrationForm').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -21,25 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify({
                 name: username,
                 email: useremail
-            }),
+        }),
 
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(response.status);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-                createSuccessAlert('Usuário cadastrado.');
-                userName.value = '';
-                userEmail.value = '';
-            })
-            .catch(error => {
-                console.error('Error:', error.message);
-                createErrorAlert(`Erro ao cadastrar usuário: status ${error.message}`);
-            });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            createSuccessAlert('Usuário cadastrado.');
+            userName.value = '';
+            userEmail.value = '';
+        })
+        .catch(error => {
+            console.error('Error:', error.message);
+            createErrorAlert(`Erro ao cadastrar usuário: status ${error.message}`);
+       });
     });
 });
 

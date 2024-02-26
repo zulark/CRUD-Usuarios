@@ -124,7 +124,7 @@ function editUser(userId) {
        })
     .then(data => {
             createSuccessAlert('Usuário alterado');
-            fetchAllUsers(); 
+            location.reload();
         })
     .catch(error => 
         console.error('Error:', error)
